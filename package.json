@@ -1,12 +1,11 @@
 {
-  "name": "nyaapi",
-  "version": "2.4.4",
+  "name": "nyaapi-sukebei",
+  "version": "2.4.5",
   "description": "Non-official api for getting torrent links from Nyaa.si and Nyaa.pantsu.cat",
   "main": "src/index.js",
   "scripts": {
     "lint": "standard --verbose --fix | snazzy",
     "test:si": "nyc ava --verbose --serial test/si.test.js",
-    "test:pantsu": "nyc ava --verbose --serial test/pantsu.test.js",
     "test": "npm run lint && nyc ava --verbose --serial",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "cloc": "cloc $(git ls-files)"
@@ -20,7 +19,6 @@
   "keywords": [
     "kawanime",
     "nyaa-si",
-    "nyaa-pantsu",
     "torrent",
     "magnet-links"
   ],
@@ -54,15 +52,13 @@
       "**/*.test.js",
       "**/node_modules/**",
       "src/si/upload.js",
-      "src/si/helpers/**",
-      "src/pantsu/upload.js",
-      "src/pantsu/update.js",
-      "src/pantsu/login.js",
-      "src/pantsu/header.js",
-      "src/pantsu/helpers/**"
+      "src/si/helpers/**"
     ]
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "directories": {
+    "test": "test"
+  }
 }

@@ -1,7 +1,7 @@
-const pantsu = require('./pantsu')
 const si = require('./si')
+const sukebei = require('./sukebei')
 
 module.exports = {
-  pantsu,
-  si
+  si,
+  sukebei
 }
