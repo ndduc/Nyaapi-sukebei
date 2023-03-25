@@ -13,7 +13,7 @@ after_success: npm run coverage
 
 deploy:
   provider: npm
-  email: kylart.dev@gmail.com
+  email: ndduc1856@gmail.com
   api_key: $NPM_TOKEN
   on:
     branch: master
