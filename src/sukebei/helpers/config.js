@@ -1,12 +1,16 @@
 const axios = require('axios')
+const https = require('https')
 
-const BASE_URL = 'https://nyaa.net/api'
+const BASE_URL = 'https://sukebei.nyaa.si'
 
 module.exports = {
   url: BASE_URL,
 
   cli: axios.create({
-    baseURL: BASE_URL
+    baseURL: BASE_URL,
+    httpsAgent: new https.Agent({
+      rejectUnauthorized: false
+    })
   }),
 
   /**
